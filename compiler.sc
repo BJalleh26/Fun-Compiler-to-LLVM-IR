@@ -310,66 +310,52 @@ def fun_compile(prog: List[Decl]): String = {
   result
 }
 
-// @main
-// def test() = {
-//   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/test.fun")
-//   val lines = try source.mkString finally source.close()
-//   val tks = tokenise(lines)
-//   println(tks)
-//   val ast = parse_tks(tks)
-//   println(ast)
-//   println("\n")
-//   val e10 = List(Def("fact",List(("n","Int"), ("b", "Double")),"Int",If(Bop("==",Var("n"),Num(0)),Num(1),Aop("*",Var("n"),Call("fact",List(Aop("-",Var("n"),Num(1))))))))
-//   val e1 = List(FConst("Ymin",-1.3), FConst("Ymax",1.3), FConst("Ystep",0.05), FConst("Xmin",-2.1), FConst("Xmax",1.1), FConst("Xstep",0.02), Const("Maxiters",1000), Def("m_iter",List(("m","Int"), ("x","Double"), ("y","Double"), ("zr","Double"), ("zi","Double")),"Void",If(Bop("<=",Var("Maxiters"),Var("m")),Call("print_star",List()),If(Bop("<=",FNum(4.0),Aop("+",Aop("*",Var("zi"),Var("zi")),Aop("*",Var("zr"),Var("zr")))),Call("print_space",List()),Call("m_iter",List(Aop("+",Var("m"),Num(1)), Var("x"), Var("y"), Aop("+",Var("x"),Aop("-",Aop("*",Var("zr"),Var("zr")),Aop("*",Var("zi"),Var("zi")))), Aop("+",Aop("*",FNum(2.0),Aop("*",Var("zr"),Var("zi"))),Var("y"))))))))
-//   println(fun_compile(e1))
-// }
+ @main
+ def fact() = {
+   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/fact.fun")
+   val lines = try source.mkString finally source.close()
+   val tks = tokenise(lines)
+   val ast = parse_tks(tks)
+   println(ast)
+   println(fun_compile(ast))
+ }
 
-// @main
-// def fact() = {
-//   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/fact.fun")
-//   val lines = try source.mkString finally source.close()
-//   val tks = tokenise(lines)
-//   val ast = parse_tks(tks)
-//   println(ast)
-//   println(fun_compile(ast))
-// }
+ @main
+ def hanoi() = {
+   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/hanoi.fun")
+   val lines = try source.mkString finally source.close()
+   val tks = tokenise(lines)
+   val ast = parse_tks(tks)
+   println(ast)
+   println(fun_compile(ast))
+ }
 
-// @main
-// def hanoi() = {
-//   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/hanoi.fun")
-//   val lines = try source.mkString finally source.close()
-//   val tks = tokenise(lines)
-//   val ast = parse_tks(tks)
-//   println(ast)
-//   println(fun_compile(ast))
-// }
+ @main
+ def mand() = {
+   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/mand.fun")
+   val lines = try source.mkString finally source.close()
+   val tks = tokenise(lines)
+   val ast = parse_tks(tks)
+   println(ast)
+   println(fun_compile(ast))
+ }
 
-// @main
-// def mand() = {
-//   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/mand.fun")
-//   val lines = try source.mkString finally source.close()
-//   val tks = tokenise(lines)
-//   val ast = parse_tks(tks)
-//   println(ast)
-//   println(fun_compile(ast))
-// }
+ @main
+ def mand2() = {
+   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/mand2.fun")
+   val lines = try source.mkString finally source.close()
+   val tks = tokenise(lines)
+   val ast = parse_tks(tks)
+   println(ast)
+   println(fun_compile(ast))
+ }
 
-// @main
-// def mand2() = {
-//   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/mand2.fun")
-//   val lines = try source.mkString finally source.close()
-//   val tks = tokenise(lines)
-//   val ast = parse_tks(tks)
-//   println(ast)
-//   println(fun_compile(ast))
-// }
-
-// @main
-// def sqr() = {
-//   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/sqr.fun")
-//   val lines = try source.mkString finally source.close()
-//   val tks = tokenise(lines)
-//   val ast = parse_tks(tks)
-//   println(ast)
-//   println(fun_compile(ast))
-// }
+ @main
+ def sqr() = {
+   val source = scala.io.Source.fromFile("C:/Users/brjal/Documents/King's College London Year 3 Courseworks/Compilers and Formal Languages - CFL/assignment2023cfl5-BrianJalleh/cw5/sqr.fun")
+   val lines = try source.mkString finally source.close()
+   val tks = tokenise(lines)
+   val ast = parse_tks(tks)
+   println(ast)
+   println(fun_compile(ast))
+ }
